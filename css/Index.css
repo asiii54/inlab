@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: rosybrown;
+    color: black;
+    font-family: "cursive", sans-serif;
+    font-size: 15px;
+    line-height: 1.6; /* riadkovanie */
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*zarovnanie na hlavnej osi.*/
+    width: 100%;
+    height: 100vh;
+    background: url("../html/1302133.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.intro__inner {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    font-size: 30px;
+    text-align: center;
+}
+
+.intro_title {
+    padding: 2px;
+    color: black;
+    font-size: 150px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+}
+
+.intro__title {
+    color: white;
+    text-shadow: 3px 5px #000;
+}
+
+.header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 3px 5px #000;
+}
+
+.nav {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.nav__link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+    color: #ccc;
+    text-shadow: 2px 1px #000;
+    text-decoration: none;
+    transition: color .1s linear;
+}
+
+.section__header {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+.section__title {
+    border: 2px solid darkorchid;
+    background-color: darkcyan;
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.section__suptitle {
+    background-color: darkcyan;
+    font-family: 'Calibri', cursive;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+.section__text {
+    background: plum;
+    font-size: 17px;
+    color: black;
+    text-align: center;
+    border: 2px solid cornflowerblue;
+
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*TABLE*/
+.color {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Calibri", Sans-Serif;
+    font-size: 14px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.color th, .color td:first-child {
+    background: #AFCDE7;
+    color: darkcyan;
+    padding: 10px 20px;
+}
+
+.color th, .color td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;
+}
+
+.color td {
+    background: #D8E6F3;
+}
+
+.color td:first-child {
+    text-align: left;
+}
+
+/*Contact*/
+#one {
+    border: 2px solid black;
+    background-color: darkcyan;
+    text-align: center;
+    padding: 10px;
+}
+#artOpnFrm{
+    margin-top: 80px;
+    background: plum;
+    font-size: 17px;
+    color: black;
+    text-align: center;
+    border: 2px solid cornflowerblue;
+}
+#opnFrm input{
+    padding: 5px 12px;
+    border-radius: 3px;
+}
+.required{
+    font-weight: bold;
+}
+button[type="reset"], button[type="submit"]{
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.hasError{
+    border: 1px solid red;
+}
+
+
+@media print {
+    body {
+        margin: 0.5in;
+        font-family: times
+    }
+
+    * {
+        background: #fff !important;
+        color: #000 !important;
+        float: none !important;
+        width: auto !important;
+        height: auto !important;
+    }
+
+    #context {
+        margin: 0 !important;
+        padding: 0
+    }
+
+    #menu, #topmenu, #thedrot, .meta, #comments, #commentform, #postcomment, #resplink, #footer {
+        display: none
+    }
+
+    #zag h1 span {
+        font-size: small;
+        display: block
+    }
+
+    a {
+        border: 0;
+        text-decoration: none;
+    }
+
+    a img {
+        border: 0
+    }
+
+    a:after {
+        content: " (" attr(href) ") ";
+        font-size: 90%;
+    }
+
+    a[href^="/"]:after {
+        content: " (http://www.aimweb.name" attr(href) ") ";
+    }
+
+    nav, aside {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 940px){
+    .header__inner{
+        display: block;
+    }
+    .header__logo{
+        width: 100%;
+        text-align: center;
+    }
+    #nav{
+        display: block;
+        text-align: center;
+    }
+    #nav a{
+        display: block;
+    }
+    .intro__title{
+        font-size: 45px;
+    }
+    .anim{
+        text-align: center;
+    }
+    .anim img{
+        max-width: 90%;
+    }
+    .container{
+        max-width: 94%;
+        padding: 3%;
+        overflow: hidden;
+    }
+}

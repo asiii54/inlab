@@ -1,0 +1,64 @@
+@media screen {
+    .round {
+        width: 10em;
+        height: 10em;
+        padding: 10px;
+        border: 2px solid #bcbcff;
+        background: mistyrose;
+
+        border-radius: 50%;
+        line-height: 10em; /* riadkovanie */
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%); /* zarovnanie textu vodorovne */
+    }
+}
+
+
+@media print {
+    body {
+        margin: 0.5in;
+        font-family: times;
+    }
+
+    * {
+        background: #fff !important;
+        color: #000 !important;
+        float: none !important;
+        width: auto !important;
+        height: auto !important;
+    }
+
+    #context {
+        margin: 0 !important;
+        padding: 0
+    }
+
+    #menu, #topmenu, #thedrot, .meta, #comments, #commentform, #postcomment, #resplink, #footer {
+        display: none
+    }
+
+    #zag h1 span {
+        font-size: small;
+        display: block
+    }
+
+    a {
+        border: 0;
+        text-decoration: none;
+    }
+
+    a img {
+        border: 0
+    }
+
+    a:after {
+        content: " (" attr(href) ") ";
+        font-size: 90%;
+    }
+
+    a[href^="/"]:after {
+        content: " (http://www.aimweb.name" attr(href) ") ";
+    }
+}
